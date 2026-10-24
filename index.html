@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>톨라리아 vs 옵시디언</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">도구 비교 · 2026-10-24</div>
+    <h1>톨라리아와 옵시디언,<br>내 볼트엔 무엇이 맞나</h1>
+    <p>두 앱의 공식 자료·깃허브 기록과 함께, 이 맥에 깔린 두 앱의 설정과 Rookie Work·Rookie Life 볼트 노트 1,440개 전부를 직접 세어서 비교했습니다.</p>
+    <div class="meta-line">조사 대상: <a href="https://tolaria.md/">Tolaria</a> · <a href="https://obsidian.md/">Obsidian</a> · 기준: 내 볼트 2개 (업무 827개, 개인 613개 노트)</div>
+  </header>
+
+  <section>
+    <h2>먼저 결론</h2>
+    <p class="lead">둘 다 같은 마크다운 파일을 여는 앱이라 하나만 골라야 하는 문제가 아닙니다. 본진은 톨라리아로 두고, 옵시디언은 필요할 때만 같은 폴더를 여는 보조 도구로 쓰는 게 맞습니다.</p>
+    <div class="verdict">
+      <div class="card"><span class="badge good">유지</span><h3>톨라리아가 지금 방식에 맞다</h3><p>노트 1,440개 <b>전부</b>에 속성(frontmatter)이 있고, type으로 나눠 쓰고, 깃으로 두 맥을 맞추고, 에이전트가 볼트를 고칩니다. 톨라리아가 기본으로 하는 일이 정확히 이것입니다.</p></div>
+      <div class="card"><span class="badge warn">보조</span><h3>옵시디언은 같은 폴더를 여는 보조</h3><p>옵시디언 전용 문법은 두 볼트 합쳐 <b>4곳</b>뿐이라 오가는 비용이 거의 없습니다. 연결 그래프, 플러그인 기능, 안정적인 모바일 앱이 필요할 때만 엽니다.</p></div>
+      <div class="card"><span class="badge bad">주의</span><h3>톨라리아 업데이트가 멈춰 있다</h3><p>설치본은 <b>2027.7.31</b>, 실제 최신 정식판은 <b>2026.10.13</b>입니다. 개발자가 연도를 잘못 붙인 버전이라 새 버전을 더 낮은 번호로 볼 가능성이 큽니다. 직접 다시 설치해야 합니다.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>1. 내 볼트는 어떤 모양인가</h2>
+    <p class="lead">어느 앱이 맞는지는 볼트 모양이 정합니다. 두 볼트의 .md 파일을 하나씩 열어 셌습니다.</p>
+    <div class="stats">
+      <div class="card stat"><div class="num">1,440개</div><div class="label">노트 수 (업무 827 · 개인 613)</div></div>
+      <div class="card stat"><div class="num">100%</div><div class="label">속성(frontmatter)이 있는 노트</div></div>
+      <div class="card stat"><div class="num">3,951개</div><div class="label">위키링크 (업무 2,110 · 개인 1,841)</div></div>
+      <div class="card stat"><div class="num">4곳</div><div class="label">옵시디언 전용 문법 (콜아웃 2 · 임베드 2)</div></div>
+      <div class="card stat"><div class="num">65 · 104종</div><div class="label">type 값 종류 (업무 · 개인)</div></div>
+    </div>
+
+    <div class="card chart-card" data-chart>
+      <p class="chart-title">업무 볼트 type 값 상위 8개 (노트 수)</p>
+      <p class="chart-sub">막대 위에 마우스를 올리면 자세한 값이 보입니다.</p>
+      <div class="chart"><div class="tooltip"></div></div>
+      <details class="table-view"><summary>표로 보기</summary><table></table></details>
+      <script type="application/json" class="chart-data">
+        { "type": "hbar", "label": "type", "value": "notes", "unit": "개",
+          "columns": ["type 값", "노트 수"],
+          "rows": [ { "type": "reference-note", "notes": 193 },
+                    { "type": "Item", "notes": 173 },
+                    { "type": "reference", "notes": 74 },
+                    { "type": "Note", "notes": 25 },
+                    { "type": "Guide", "notes": 13 },
+                    { "type": "Project", "notes": 12 },
+                    { "type": "sop", "notes": 10 },
+                    { "type": "operating-rule", "notes": 8 } ] }
+      </script>
+    </div>
+
+    <div class="two-col">
+      <div class="card"><h3>읽을 점</h3><ul class="clean">
+        <li><b>속성 100%</b>: 톨라리아의 속성 패널과 type 사이드바가 손대지 않고 바로 먹힙니다. 옵시디언에서도 속성은 보이지만, type으로 묶어 보려면 Bases 같은 설정을 따로 해야 합니다.</li>
+        <li><b>위키링크 3,951개</b>: [[ ]]는 두 앱 공통이라 어느 쪽에서 열어도 링크가 살아 있습니다.</li>
+        <li><b>옵시디언 전용 문법 4곳</b>: Dataview 0곳, 콜아웃 2곳, ![[ ]] 임베드 2곳. 옵시디언에 묶인 볼트가 아닙니다.</li>
+        <li><b>.obsidian 폴더 걱정 없음</b>: 두 볼트 모두 .gitignore에 .obsidian/이 이미 들어 있어, 옵시디언으로 열어도 깃 기록에 섞이지 않습니다.</li>
+      </ul></div>
+      <div class="card"><h3>type이 흩어져 있다</h3><ul class="clean">
+        <li>reference-note 193개와 reference 74개, Note 25개처럼 <b>같은 뜻 다른 이름</b>이 섞여 있습니다.</li>
+        <li>그래서 사이드바 type 칸이 업무 볼트 65개, 개인 볼트 104개가 됩니다.</li>
+        <li>톨라리아는 type을 "규칙이 아니라 찾는 렌즈"로 쓰라고 하니 틀린 건 아니지만, 이름을 합치면 톨라리아의 장점이 더 커집니다.</li>
+      </ul><p class="note">노트 첫 부분의 type: 줄을 그대로 센 값입니다. 업무·개인에 같은 이름이 있으면 각각 셌습니다.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. 두 앱은 생각하는 방식이 다르다</h2>
+    <p class="lead">파일 형식은 같고, 정리하는 방법과 기대는 곳이 다릅니다.</p>
+    <div class="two-col">
+      <div class="card"><h3>톨라리아: 노션처럼 정리, 깃처럼 저장</h3><ul class="clean">
+        <li>개발자 소개 그대로 <b>"노션 같은데 오프라인이고 진짜 파일"</b>. 노트마다 type이 있고, 노트끼리 소속·관련·포함 관계를 칸으로 이어 붙입니다.</li>
+        <li>볼트 하나가 곧 <b>깃 저장소</b>. 자동 커밋·푸시(AutoGit)와 노트별 변경 기록이 앱 안에 있습니다.</li>
+        <li><b>AI가 같이 쓰는 볼트</b>를 전제로 만듭니다. Claude Code·Codex·Gemini 같은 에이전트 연결, MCP 서버, AGENTS 파일 안내가 기본입니다.</li>
+        <li>플러그인은 없습니다. 기능은 앱이 직접 넣습니다.</li>
+      </ul></div>
+      <div class="card"><h3>옵시디언: 연결로 생각, 플러그인으로 확장</h3><ul class="clean">
+        <li>폴더·태그·링크로 엮고, <b>그래프 뷰</b>와 캔버스로 연결을 눈으로 봅니다.</li>
+        <li>커뮤니티 플러그인 <b>9,389개</b>, 테마 <b>934개</b>. 없는 기능은 거의 플러그인으로 채웁니다.</li>
+        <li>동기화는 공식 Sync(유료)나 iCloud, 깃 플러그인 중에 고릅니다. 깃은 기본 기능이 아닙니다.</li>
+        <li>AI 기능은 기본에 없고 플러그인이나 바깥 도구로 붙입니다.</li>
+      </ul></div>
+    </div>
+    <figure class="card"><img src="img/tolaria.jpg" alt="톨라리아 앱 화면. 왼쪽 type 목록, 가운데 노트, 오른쪽 속성과 관계 패널"><figcaption>톨라리아 공식 화면(개발자 본인 볼트, 노트 9,822개). 왼쪽은 type별 목록, 오른쪽은 속성과 Belongs to·Related to·Has 관계 칸, 아래 줄은 Commit·History 깃 버튼입니다.</figcaption></figure>
+  </section>
+
+  <section>
+    <h2>3. 항목별 비교</h2>
+    <p class="lead">왼쪽이 옵시디언, 오른쪽이 지금 쓰는 톨라리아. 크게 앞서는 쪽 칸에 색을 칠했습니다.</p>
+    <div class="card table-scroll">
+      <table>
+        <thead><tr><th>항목</th><th class="col-theirs">옵시디언</th><th class="col-ours">톨라리아</th></tr></thead>
+        <tbody>
+          <tr><td>나온 때</td><td class="col-theirs">2020년, 최신 1.14.5 (10월 22일)</td><td class="col-ours">2026년 4월 22일 공개</td></tr>
+          <tr><td>소스 공개</td><td class="col-theirs">비공개</td><td class="col-ours diff-hi">오픈소스 AGPL-3.0, 깃허브 별 20,162개</td></tr>
+          <tr><td>파일 형식</td><td class="col-theirs">마크다운 + YAML 속성</td><td class="col-ours">마크다운 + YAML 속성 (같음)</td></tr>
+          <tr><td>정리 방식</td><td class="col-theirs">폴더·태그·링크, Bases로 속성 표 보기</td><td class="col-ours diff-hi">type + 관계 칸 + 저장된 뷰(YAML)</td></tr>
+          <tr><td>동기화·기록</td><td class="col-theirs">공식 Sync 월 4달러(연간 결제)부터, 또는 iCloud·깃 플러그인</td><td class="col-ours diff-hi">깃 내장, 자동 커밋·푸시, 내 설정은 5분마다 자동으로 받아옴</td></tr>
+          <tr><td>AI 연결</td><td class="col-theirs">기본 없음, 플러그인으로</td><td class="col-ours diff-hi">에이전트 패널(Claude Code·Codex·Gemini 등), MCP 서버 내장</td></tr>
+          <tr><td>확장</td><td class="col-theirs diff-hi">플러그인 9,389개, 테마 934개</td><td class="col-ours">플러그인 없음</td></tr>
+          <tr><td>연결 보기</td><td class="col-theirs diff-hi">그래프 뷰, 캔버스</td><td class="col-ours">화이트보드 있음, 그래프 뷰는 공식 소개에 없음</td></tr>
+          <tr><td>모바일</td><td class="col-theirs diff-hi">iOS·안드로이드 정식 앱</td><td class="col-ours">아이폰·아이패드 베타 (TestFlight, 디스코드 가입 필요)</td></tr>
+          <tr><td>지운 노트</td><td class="col-theirs diff-hi">휴지통으로</td><td class="col-ours">휴지통 없음, 깃 기록으로만 복구</td></tr>
+          <tr><td>앱 크기 (이 맥)</td><td class="col-theirs">482MB (Electron)</td><td class="col-ours diff-hi">35MB (Tauri)</td></tr>
+          <tr><td>웹 게시</td><td class="col-theirs diff-hi">Publish 월 8달러(연간 결제)</td><td class="col-ours">없음</td></tr>
+          <tr><td>가격</td><td class="col-theirs">무료 (회사 업무도 무료), 동기화·게시만 유료</td><td class="col-ours">전부 무료, 계정 없음</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. 톨라리아는 아주 빨리 바뀐다</h2>
+    <p class="lead">5월 3일부터 10월 24일까지 175일 동안 배포가 1,000번, 하루 평균 5.7번입니다. 좋아지는 속도이면서 흔들리는 이유입니다.</p>
+    <div class="card chart-card" data-chart>
+      <p class="chart-title">톨라리아 월별 배포 횟수 (시험판 포함)</p>
+      <p class="chart-sub">10월은 24일까지. 5월은 깃허브가 최근 1,000개까지만 보여줘서 뺐습니다.</p>
+      <div class="chart"><div class="tooltip"></div></div>
+      <details class="table-view"><summary>표로 보기</summary><table></table></details>
+      <script type="application/json" class="chart-data">
+        { "type": "bar", "label": "month", "value": "releases", "unit": "번",
+          "labelAt": ["2026.06", "2026.09", "2026.10"],
+          "columns": ["월", "배포 횟수"],
+          "rows": [ { "month": "2026.06", "releases": 246 },
+                    { "month": "2026.07", "releases": 231 },
+                    { "month": "2026.08", "releases": 94 },
+                    { "month": "2026.09", "releases": 58 },
+                    { "month": "2026.10", "releases": 114 } ] }
+      </script>
+    </div>
+    <div class="two-col">
+      <div class="card"><h3>좋은 점</h3><ul class="clean">
+        <li>버그 신고가 며칠 안에 고쳐집니다. 오늘(10월 24일) 하루에만 시험판이 7번 나왔습니다.</li>
+        <li>개발자가 하루 2시간 이상 붙어 있겠다고 공개적으로 약속했고, 본인이 노트 1만 개 넘는 볼트로 매일 씁니다.</li>
+      </ul></div>
+      <div class="card"><h3>흔들리는 점</h3><ul class="clean">
+        <li><b>버전 번호 실수</b>: 7월 31일·8월 28일 정식판에 연도를 2027로 붙였습니다. 이 맥의 설치본이 바로 <b>2027.7.31</b>(8월 2일 설치)입니다.</li>
+        <li>깃허브 이슈 #1160에 따르면 홈브루는 이 번호를 더 새 것으로 보고 업데이트를 멈춥니다. 개발자는 9월 24일 고쳤다며 닫았지만, 오늘도 홈브루 최신 표시는 2027.08.28입니다.</li>
+        <li>7월 31일 판 이후 정식판이 6번 더 나왔습니다(8월 11일부터 10월 13일까지). 앱 안 자동 업데이트도 같은 이유로 멈췄을 가능성이 큽니다.</li>
+        <li>휴지통이 없어 실수로 지운 노트는 깃 기록에서 꺼내야 합니다.</li>
+      </ul><p class="note">앱 안 자동 업데이트가 멈췄다는 것은 버전 번호를 보고 한 추정입니다. 앱의 업데이트 확인 화면으로는 확인하지 않았습니다.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. 그래서 어떻게</h2>
+    <div class="two-col">
+      <div class="card"><h3>지금 바로 되는 것</h3><ul class="clean">
+        <li>옵시디언에서 "폴더를 보관함으로 열기"로 Rookie Work·Rookie Life 폴더를 그대로 열면 됩니다. 복사나 변환이 필요 없습니다.</li>
+        <li>.obsidian/은 이미 깃에서 빠지게 되어 있어 두 맥 동기화에 섞이지 않습니다.</li>
+        <li>두 맥 동기화는 이미 깃으로 되고 있어 옵시디언 Sync(월 4~5달러)는 살 필요가 없습니다.</li>
+      </ul></div>
+      <div class="card"><h3>조심할 것</h3><ul class="clean">
+        <li><b>두 앱 동시 편집</b>: 같은 노트를 양쪽에 열어 두고 고치면 나중에 저장한 쪽이 덮어쓸 수 있습니다. 한 번에 한 앱만.</li>
+        <li><b>플러그인 전용 문법</b>: Dataview 같은 문법을 쓰기 시작하면 톨라리아와 에이전트가 제대로 못 읽는 노트가 생깁니다. 볼트 본문에는 쓰지 않는 게 안전합니다.</li>
+        <li><b>옛 볼트 목록</b>: 옵시디언에는 옛 경로 4개(Obsidian Vault, iCloud rookie, Rookie OS, Rookie-OS-Second-Brain), 톨라리아에는 꺼진 옛 볼트 5개가 남아 있습니다. 잘못 열면 아카이브 쪽을 고치게 됩니다.</li>
+      </ul></div>
+    </div>
+    <div class="card"><h3>추천 순서</h3><ul class="clean">
+      <li><b>1. 톨라리아 다시 설치</b>: tolaria.md에서 최신 정식판(2026.10.13 이후)을 받아 덮어 설치. 설정과 볼트 목록은 앱 밖 설정 폴더에 있어 그대로 남습니다.</li>
+      <li><b>2. type 이름 합치기</b>: reference-note와 reference처럼 겹치는 이름부터 정해 업무 65종, 개인 104종을 줄이면 사이드바가 바로 깔끔해집니다. 어떤 이름으로 합칠지는 직접 정해야 합니다.</li>
+      <li><b>3. 옵시디언은 쓸 일이 생길 때만</b>: 연결 그래프를 보고 싶을 때, 특정 플러그인이 필요할 때, 폰에서 안정적으로 볼 때. 그 외에는 톨라리아 하나로 충분합니다.</li>
+      <li><b>4. 옛 볼트 목록 정리</b>: 두 앱의 볼트 목록에서 아카이브 경로를 빼 두면 헷갈릴 일이 없습니다.</li>
+    </ul></div>
+  </section>
+
+  <footer>자료: <a href="https://github.com/refactoringhq/tolaria">톨라리아 깃허브</a>(별·라이선스·배포 기록, 2026-10-24 기준), <a href="https://refactoring.fm/p/introducing-tolaria">톨라리아 공개 글</a>, <a href="https://tolaria.md/">tolaria.md</a>, <a href="https://github.com/refactoringhq/tolaria/issues/1160">이슈 #1160</a>, <a href="https://obsidian.md/pricing">옵시디언 가격</a>, <a href="https://github.com/obsidianmd/obsidian-releases">옵시디언 플러그인·테마 목록</a>, 이 맥의 두 앱 설정 파일과 볼트 .md 파일 직접 집계. 앱 안 자동 업데이트 멈춤은 추정입니다.</footer>
+</main>
+<script src="chart.js"></script>
+</body>
+</html>
